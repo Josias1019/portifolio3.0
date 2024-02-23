@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*background-image: url("image/bg.jpg"); */
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Início do CSS do menu */
+#menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.li-menu {
+  list-style: none;
+  
+}
+
+.link-menu {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 50% 70%;
+  background-color: aquamarine;
+}
+
+#text-apresentation {
+  display: flex;
+}
+
+.imagem-slider {
+  max-height: 320px; height: auto;
+  max-width: 320px; width: auto;
+  border-radius: 100%;
+}
+
+@media only screen and (max-width: 390px) {
+  body {
+    
+    background-image: url(image/cellbg3.jpg); 
+    
+    background-size: cover; /* Ajusta o tamanho do background para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem de fundo */
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  main {
+    background: linear-gradient(-45deg, #f7f7f75b, #33333354, #1a1a1a52, #f7f7f757); /* Cor laranja semi-transparente */
+  }
+
+  /* Quando a tela for menor que 768px, alteramos o layout para empilhar verticalmente */
+  #menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    top: 0;
+    max-height: 90px; height: 100%;
+    width: 100%;
+    background-color: #000000;
+    z-index: 1000;
+    margin-bottom: 10%;
+  }
+
+
+
+  i {
+    color: #FF1493;
+  }
+
+  /* Removemos o padding horizontal e aplicamos espaçamento vertical para cada item do menu */
+  .li-menu { 
+    padding: 10px;
+  }
+
+  .link-menu {
+    background-color: azure;
+    max-height: 10px;
+    height: 100%;
+    max-width: 30px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50%;
+  }
+
+  #text-apresentation {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #FFA500;
+    border-radius: 5%;
+    margin: 20% 5% 5% 5%;
+ 
+  }
+
+  .text-main {
+    margin-top: 10%;
+    margin-bottom: 10%; 
+    margin-left: 5%;
+    margin-right: 5%;  
+    
+  }
+  
+  #photo-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+
+  .imagem-slider {
+    max-height: 320px; height: auto;
+    max-width: 320px; width: auto;
+    border-radius: 100%;
+  }
+
+  footer {
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /
+  }
+}

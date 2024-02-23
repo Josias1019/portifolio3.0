@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio-3.0</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- slider -->
+    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="slick-master/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/javascript-main.js"></script>
+
+</head>
+
+<body>
+
+    <!-- cabeçalho  -->
+
+    <!--
+
+         1- fazer menu.
+
+         2- organizar o ->div id="menu"<-.
+
+         3- fazer o css do ->div id="menu"<-.
+
+            (fazer responsivo, com uma visão futuristica com um pouco de 'neon',
+            vai ser menu simples que ao clicar ele vá diretamente para pasta.)
+
+         4- criar pastas dos  itens do ->div id="menu"<-.
+
+            (fazer bem organizado e limpo.)
+
+         5- pensar em uma logo para o Portifolio. 
+
+            (fazer uma logo simples e profissional.)
+
+         6- criar uma transição
+
+            (uma transição ao abrir a pagina, e adicionar também transições
+            ao mudar de paginas.)
+
+         7- modificar o ->row<- da página.
+         
+     -->
+
+    <header>
+
+        <!-- logo-tipo -->
+        <div>
+            <h1>Logo tipo</h1>
+        </div>
+        <!-- fim logo-tipo -->
+
+        <!-- menu -->
+        <div id="menu">
+
+            <ul class="main-menu">
+                <li class="li-menu"><a href="" class="link-menu"><i class="fas fa-home"></i></a></li>
+                <li class="li-menu"><a href="" class="link-menu"><i class="fas fa-code"></i></a></li>
+                <li class="li-menu"><a href="" class="link-menu"><i class="fas fa-phone"></i></a></li>
+            </ul>
+
+        </div>
+        <!-- fim menu -->
+
+    </header>
+
+    <!-- fim cabeçalho -->
+
+    <!-- conteúdo principal -->
+
+    <!--
+
+        - deixar o body responsivo.
+
+        - fazer um inicio principal com uma imagem de background. 
+
+        - criar uma ->div id="text-apresentation"<- para um texto de apresentação.
+          
+          (cujo o background da ->div id="text-apresentation"<- vai ser meio transparente, e com a cor que combine
+           com o background, o texto vai ser no -p- para fazer teste logo de inicio, colocar um -box-shadow- nessa
+            ->div id="text-apresentation"<- para que quando passar o mouse por cima da ->div id="text-apresentation"<-
+            apareça um brilho em neon ao redor dela, vai ficar muito legal.)
+
+        - colocar fotos do meu projeto.
+
+            (as fotos ficaram em uma div redonda e fica passando a imagem automaticamente)
+
+    -->
+
+    <main>
+
+        <!-- text-apresentation -->
+        <div id="text-apresentation">
+
+            <div class="text-main">
+                <p>Olá! Meu nome é Josias Filie Gomes da Silva e sou um entusiasta da tecnologia apaixonado por
+                    programação. Estou em constante busca de conhecimento e evolução, sempre pronto para enfrentar novos
+                    desafios e aprender algo novo.
+
+                    Atualmente, estou cursando Ciência da Computação na faculdade, onde venho aprimorando minhas
+                    habilidades técnicas e teóricas. Estou determinado a me tornar um profissional de destaque na área
+                    de programação e contribuir de forma significativa para projetos inovadores.
+
+                    Estou ansioso para iniciar minha jornada profissional e estou aberto a oportunidades em qualquer
+                    área. Tenho facilidade em aprender, sou proativo e estou sempre disposto a enfrentar novos desafios.
+                    Meu maior sonho é conquistar minha primeira oportunidade de emprego na área de programação e mostrar
+                    meu potencial.
+
+                    Estou comprometido em desenvolver soluções criativas e eficientes, trabalhando em equipe e buscando
+                    constantemente a excelência. Estou pronto para embarcar nesta emocionante jornada e contribuir para
+                    o sucesso de projetos inovadores. Vamos trabalhar juntos para transformar ideias em realidade!
+
+                </p>
+            </div>
+
+        </div>
+        <!-- fim text-apresentation -->
+
+        <!-- foto redonda -->
+        <div id="photo-project">
+
+            <div class="slider">
+                <!-- Imagens do Slider -->
+                <img src="image/code1.png" alt="Imagem do Slider" class="imagem-slider">
+                <img src="image/code2.png" alt="Imagem do Slider" class="imagem-slider">
+                <img src="image/code3.png" alt="Imagem do Slider" class="imagem-slider">
+            </div>
+
+
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("imagem-slider");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 3000); // Change image every 2 seconds
+                }
+            </script>
+
+
+
+        </div>
+
+        <div class="">
+
+        </div>
+
+        <!-- fim foto redonda -->
+
+    </main>
+
+
+
+    <!-- fim conteúdo principal -->
+
+    <!-- rodapé -->
+
+    <!--
+
+        - o rodapé deve mostrar o mês e o ano.
+
+        - deve conter informações para contato.
+
+        - tentar criar uma animação como logo-tipo que ela também brilhe ao passar o mouse.
+
+     -->
+    <footer>
+
+        <!-- 
+            aqui vai ter informaçoes para contato. 
+         -->
+        <div class="left-footer">
+
+        </div>
+
+        <!--
+            aqui vai ter data e ano, e alguma mensagem de agradecimento.
+        -->
+        <div id="mid-footer">
+
+            <p>
+                <span id="monthYears"></span>
+            </p>
+
+            <script>
+                // data e ano atualizado
+                function getmonthYears() {
+                    const data = new Date();
+                    const mes = data.toLocaleString('default', { month: 'long' });
+                    const ano = data.getFullYear();
+                    return `${mes} ${ano}`;
+                }
+
+                document.getElementById('monthYears').textContent = getmonthYears();
+            </script>
+
+        </div>
+
+        <!-- 
+            aqui vai ter alguma animação.
+         -->
+        <div class="right-footer">
+
+        </div>
+
+    </footer>
+
+    <!-- fim do roda pé -->
+
+</body>
+
+</html>
