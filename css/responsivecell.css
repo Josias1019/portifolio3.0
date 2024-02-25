@@ -5,7 +5,7 @@
       
       background-size: cover; /* Ajusta o tamanho do background para cobrir toda a tela */
       background-position: center; /* Centraliza a imagem de fundo */
-      font-size: 1em;
+      font-size: 14px;
       display: flex;
       flex-direction: column;
       
