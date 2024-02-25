@@ -56,7 +56,7 @@
 
     .link-menu:active {
         box-shadow: 0 0 10px #FFA500;
-      transition: box-shadow 0s ease; /* Transição suave da sombra */
+      
         box-shadow: 0 0 20px #FFA500; /* Aumenta a intensidade da sombra quando clicado */
     }
   
