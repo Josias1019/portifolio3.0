@@ -58,19 +58,29 @@
     <header>
 
         <!-- logo-tipo -->
-        <div>
-            <h1>Logo tipo</h1>
-        </div>
+
+
+
         <!-- fim logo-tipo -->
 
         <!-- menu -->
         <div id="menu">
 
             <ul class="main-menu">
-                <li class="li-menu"><a href="" class="link-menu"><i class="fas fa-home"></i></a></li>
-                <li class="li-menu"><a href="" class="link-menu"><i class="fas fa-code"></i></a></li>
+                <li class="li-menu"><a href="" class="link-menu" onclick="adicionarBrilho(this)"><i
+                            class="fas fa-home"></i></a></li>
+                <li class="li-menu"><a href="Projetos/index.html" class="link-menu"><i class="fas fa-code"></i></a></li>
                 <li class="li-menu"><a href="" class="link-menu"><i class="fas fa-phone"></i></a></li>
             </ul>
+
+            <script>
+                function adicionarBrilho(elemento) {
+                    elemento.classList.add('brilho'); // Adiciona a classe 'brilho' ao elemento clicado
+                    setTimeout(function () {
+                        elemento.classList.remove('brilho'); // Remove a classe 'brilho' após um intervalo de tempo
+                    }, 300); // Ajuste o valor conforme necessário
+                }
+            </script>
 
         </div>
         <!-- fim menu -->
@@ -103,10 +113,10 @@
     <main>
 
         <!-- text-apresentation -->
-        <div id="text-apresentation">
+        <div id="text-apresentation" class="fade-in">
 
             <div class="text-main">
-                <p>Olá! Meu nome é Josias Filie Gomes da Silva e sou um entusiasta da tecnologia apaixonado por
+                <p>Olá! Meu nome é Josias Filipe Gomes da Silva e sou um entusiasta da tecnologia apaixonado por
                     programação. Estou em constante busca de conhecimento e evolução, sempre pronto para enfrentar novos
                     desafios e aprender algo novo.
 
@@ -130,7 +140,7 @@
         <!-- fim text-apresentation -->
 
         <!-- foto redonda -->
-        <div id="photo-project">
+        <div id="photo-project" class="fade-in">
 
             <div class="slider">
                 <!-- Imagens do Slider -->
@@ -191,15 +201,20 @@
          -->
         <div class="left-footer">
 
+
+
         </div>
 
         <!--
             aqui vai ter data e ano, e alguma mensagem de agradecimento.
         -->
-        <div id="mid-footer">
+        <div id="mid-footer" class="fade-in">
 
             <p>
-                <span id="monthYears"></span>
+                <span id="monthYears"></span><br>
+
+            <p class="version">version 3.0</p>
+
             </p>
 
             <script>
@@ -226,6 +241,34 @@
     </footer>
 
     <!-- fim do roda pé -->
+
+    <script>
+        // Função para aplicar efeito de fade-in
+        function fadeIn(element) {
+            var opacity = 0;
+            var interval = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.01;
+                    element.style.opacity = opacity;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 10);
+        }
+
+        // Função para aplicar fade-in em todos os elementos com a classe 'fade-in'
+        function applyFadeInEffect() {
+            var elements = document.querySelectorAll('.fade-in');
+            elements.forEach(function (element) {
+                fadeIn(element);
+            });
+        }
+
+        // Aguarda o carregamento completo do DOM antes de aplicar o efeito de fade-in
+        document.addEventListener('DOMContentLoaded', function () {
+            applyFadeInEffect();
+        });
+    </script>
 
 </body>
 
