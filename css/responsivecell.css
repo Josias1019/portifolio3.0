@@ -1,0 +1,115 @@
+@media only screen and (max-width: 414px) {
+    body {
+      
+      background-image: url(image/cellbg3.jpg); 
+      
+      background-size: cover; /* Ajusta o tamanho do background para cobrir toda a tela */
+      background-position: center; /* Centraliza a imagem de fundo */
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      
+    }
+  
+    main {
+      background: linear-gradient(-45deg, #f7f7f75b, #33333354, #1a1a1a52, #f7f7f757); /* Cor laranja semi-transparente */
+    }
+  
+    /* Quando a tela for menor que 768px, alteramos o layout para empilhar verticalmente */
+    #menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1em;
+      position: fixed;
+      top: 0;
+      max-height: 90px; height: 100%;
+      width: 100%;
+      background-color: #282a36;
+      z-index: 1000;
+      
+    }
+  
+  
+  
+    i {
+      color: #FFA500;
+    }
+  
+    /* Removemos o padding horizontal e aplicamos espaçamento vertical para cada item do menu */
+    .li-menu { 
+      padding: 20px;
+    }
+  
+    .link-menu {
+      
+      background-color: azure;
+      max-height: 10px;
+      height: 100%;
+      max-width: 30px;
+      width: 100%;
+      padding: 20px;
+      border-radius: 50%;
+    }
+
+    .link-menu:active {
+        box-shadow: 0 0 10px #FFA500;
+      transition: box-shadow 0s ease; /* Transição suave da sombra */
+        box-shadow: 0 0 20px #FFA500; /* Aumenta a intensidade da sombra quando clicado */
+    }
+  
+    #text-apresentation {
+      display: flex;
+      text-align: center;
+      font-size: 14px;
+      align-items: center;
+      background-color: #FFA500;
+      border-radius: 5% 5%  5% 5%;
+      max-width: 350px;
+      height: auto;
+      max-height: 800px;
+      height: auto;
+      margin-top: 130px;
+      margin-left: 5%;
+      box-shadow: 0px 30px 15px rgba(255, 165, 0, 0.5);
+    }
+  
+    .text-main {
+      margin-top: 10%;
+      margin-bottom: 10%; 
+      margin-left: 5%;
+      margin-right: 5%;  
+      
+    }
+    
+    #photo-project {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 10%;
+      margin-bottom: 20%;
+    }
+  
+    .imagem-slider {
+      max-height: 320px; height: auto;
+      max-width: 320px; width: auto;
+      border-radius: 100%;
+    }
+  
+    footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /
+    }
+
+
+
+  }
