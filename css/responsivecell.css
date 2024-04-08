@@ -1,4 +1,4 @@
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 390px), (min-width: 414px) {
   body {
     background-size: auto;
     display: flex;
@@ -38,7 +38,6 @@
       z-index: 1000;
     }
 
-  
     i {
       color: #FFA500;
     }
@@ -76,10 +75,7 @@
 
   #text-apresentation {
     display: flex;
-
     font-size: 14px ;
-
-
     background-color: #252525;
     border-radius: 50px; /* Aumente este valor para arredondar mais as bordas */
     max-width: 350px;
