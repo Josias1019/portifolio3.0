@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio-3.0</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- slider -->
+    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick-theme.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsivecell.css">
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="slick-master/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/javascript-main.js"></script>
+
+</head>
+
+<body>
+
+    <!-- cabeçalho  -->
+
+    <!--
+
+         1- fazer menu.
+
+         2- organizar o ->div id="menu"<-.
+
+         3- fazer o css do ->div id="menu"<-.
+
+            (fazer responsivo, com uma visão futuristica com um pouco de 'neon',
+            vai ser menu simples que ao clicar ele vá diretamente para pasta.)
+
+         4- criar pastas dos  itens do ->div id="menu"<-.
+
+            (fazer bem organizado e limpo.)
+
+         5- pensar em uma logo para o Portifolio. 
+
+            (fazer uma logo simples e profissional.)
+
+         6- criar uma transição
+
+            (uma transição ao abrir a pagina, e adicionar também transições
+            ao mudar de paginas.)
+
+         7- modificar o ->row<- da página.
+         
+     -->
+
+    <header>
+
+        <!-- logo-tipo -->
+
+
+
+        <!-- fim logo-tipo -->
+
+        <!-- menu -->
+        <div id="menu">
+
+            <ul id="myBody" class="main-menu">
+                <li class="li-menu"><a to="/abaut" class="link-menu" onclick="mudarCor()"><i id="i"
+                            class="fas fa-home"></i></a>
+                </li>
+                <li class="li-menu"><a href="projects.html" class="link-menu" onclick="mudarCor()"><i
+                            class="fas fa-code"></i></a></li>
+                <li class="li-menu"><a href="contact.html" class="link-menu" onclick="mudarCor()"><i
+                            class="fas fa-phone"></i></a></li>
+            </ul>
+
+            <script>
+                function mudarCor() {
+                    var botao = document.getElementById('li-menu');
+                    botao.classList.toggle('botaoClicado');
+                }
+
+                function scrollToTop(element, duration) {
+                    var start = element.scrollTop;
+                    var startTime = performance.now();
+
+                    function scrollStep(timestamp) {
+                        var currentTime = timestamp - startTime;
+
+                        element.scrollTop = Math.easeInOutQuad(currentTime, start, 0, duration);
+
+                        if (currentTime < duration) {
+                            requestAnimationFrame(scrollStep);
+                        }
+                    }
+
+                    requestAnimationFrame(scrollStep);
+                }
+
+                // Função de interpolação para suavizar a rolagem
+                Math.easeInOutQuad = function (t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return (c / 2) * t * t + b;
+                    t--;
+                    return (-c / 2) * (t * (t - 2) - 1) + b;
+                };
+            </script>
+
+        </div>
+        <!-- fim menu -->
+
+    </header>
+
+    <!-- fim cabeçalho -->
+
+    <!-- conteúdo principal -->
+
+    <!--
+
+        - deixar o body responsivo.
+
+        - fazer um inicio principal com uma imagem de background. 
+
+        - criar uma ->div id="text-apresentation"<- para um texto de apresentação.
+          
+          (cujo o background da ->div id="text-apresentation"<- vai ser meio transparente, e com a cor que combine
+           com o background, o texto vai ser no -p- para fazer teste logo de inicio, colocar um -box-shadow- nessa
+            ->div id="text-apresentation"<- para que quando passar o mouse por cima da ->div id="text-apresentation"<-
+            apareça um brilho em neon ao redor dela, vai ficar muito legal.)
+
+        - colocar fotos do meu projeto.
+
+            (as fotos ficaram em uma div redonda e fica passando a imagem automaticamente)
+
+    -->
+
+    <main id="content" class="footer-blur">
+
+        <!-- text-apresentation -->
+        <div id="text-apresentation" class="fade-in">
+
+            <div class="text-main">
+                <p> Hello! My name is Josias Filipe, and I'm a technology enthusiast passionate about programming. I'm
+                    constantly seeking knowledge and growth, always ready to take on new challenges and learn something
+                    new.
+
+                    Currently, I'm studying Computer Science at college, where I'm enhancing both my technical and
+                    theoretical skills. I'm determined to become a standout professional in the programming field and
+                    contribute significantly to innovative projects.
+
+                    I'm eager to start my professional journey and open to opportunities in any area. I'm quick to
+                    learn, proactive, and always willing to take on new challenges. My biggest dream is to secure my
+                    first job opportunity in the programming field and showcase my potential.
+
+                    I'm committed to developing creative and efficient solutions, working in teams, and constantly
+                    striving for excellence. I'm ready to embark on this exciting journey and contribute to the success
+                    of innovative projects. Let's work together to turn ideas into reality!
+
+                </p>
+            </div>
+
+        </div>
+        <!-- fim text-apresentation -->
+
+        <!-- foto redonda -->
+        <div id="photo-project" class="fade-in">
+
+            <div class="slider">
+                <!-- Imagens do Slider -->
+                <img src="image/code1.png" alt="Imagem do Slider" class="imagem-slider">
+                <img src="image/code2.png" alt="Imagem do Slider" class="imagem-slider">
+                <img src="image/code3.png" alt="Imagem do Slider" class="imagem-slider">
+            </div>
+
+            <!-- script do slider -->
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("imagem-slider");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 3000); // Change image every 2 seconds
+                }
+            </script>
+            <!-- fim script slider -->
+
+        </div>
+
+        <div class="">
+
+        </div>
+
+        <!-- fim foto redonda -->
+
+    </main>
+
+
+
+    <!-- fim conteúdo principal -->
+
+    <!-- rodapé -->
+
+    <!--
+
+        - o rodapé deve mostrar o mês e o ano.
+
+        - deve conter informações para contato.
+
+        - tentar criar uma animação como logo-tipo que ela também brilhe ao passar o mouse.
+
+     -->
+    <footer>
+
+        <!-- 
+            aqui vai ter informaçoes para contato. 
+         -->
+        <div id="left-footer">
+
+            <h1 class="contato-h1">contatos</h1><br>
+
+            <div class="gmail-pai">
+                <img src="image/social.png" alt="seu navegador não suporta esta iamgem" class="foto-gmail">
+                <h4 class="gmail">jobacraft@gmail.com</h4>
+            </div>
+
+            <div class="cell-pai">
+                <img src="image/phone.png" alt="" class="foto-cell">
+                <h4 class="cell"> +55 (81) 98551-0289</h4>
+            </div>
+
+            <div class="linkedin-pai">
+                <img src="image/linkedin.png" alt="" class="foto-linkedin">
+                <h4 class="linkedin"><a class="a-linkedin"
+                        href="https://www.linkedin.com/in/josias-filipe-a4a078192/">https://www.linkedin.com/in/josias-filipe-a4a078192/</a>
+                </h4>
+
+            </div>
+        </div>
+
+        <!--
+            aqui vai ter data e ano, e alguma mensagem de agradecimento.
+        -->
+        <div id="mid-footer">
+
+            <h3 class="h1-josias">
+                <span>&#169;</span>
+                portfolio Josias
+            </h3>
+            <p class="p-version">version 4.0.1 <br><span id="monthYears"></span></p>
+
+            <!-- script para mostrar mês e ano sempre atualizados -->
+
+            <script>
+                // data e ano atualizado
+                function getmonthYears() {
+                    const data = new Date();
+                    const mes = data.toLocaleString('default', { month: 'long' });
+                    const ano = data.getFullYear();
+                    return `${mes} ${ano}`;
+                }
+
+                document.getElementById('monthYears').textContent = getmonthYears();
+            </script>
+
+        </div>
+
+        <!-- 
+            aqui vai ter alguma animação.
+         -->
+        <div id="right-footer">
+            <!-- foto redonda -->
+            <div class="photo-footer">
+
+                <div class="-footer-slider">
+                    <!-- Imagens do Slider -->
+                    <img src="image/html-5.png" alt="Imagem do footer" class="footer-slider">
+                    <img src="image/css-3.png" alt="Imagem do footer" class="footer-slider">
+                    <img src="image/java-script.png" alt="Imagem do footer" class="footer-slider">
+                    <img src="image/python.png" alt="Imagem do footer" class="footer-slider">
+                </div>
+
+                <!-- script do slider -->
+                <script>
+                    var myIndexFooter = 0;
+                    carouselFooter();
+
+                    function carouselFooter() {
+                        var i;
+                        var x = document.getElementsByClassName("footer-slider");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        myIndexFooter++;
+                        if (myIndexFooter > x.length) { myIndexFooter = 1 }
+                        x[myIndexFooter - 1].style.display = "block";
+                        setTimeout(carouselFooter, 2000); // Change image every 2 seconds
+                    }
+                </script>
+                <!-- fim script slider -->
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- fim do roda pé -->
+
+    <script>
+        // Função para aplicar efeito de fade-in
+        function fadeIn(element) {
+            var opacity = 0;
+            var interval = setInterval(function () {
+                if (opacity < 1) {
+                    opacity += 0.02;
+                    element.style.opacity = opacity;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 1);
+        }
+
+        // Função para aplicar fade-in em todos os elementos com a classe 'fade-in'
+        function applyFadeInEffect() {
+            var elements = document.querySelectorAll('.fade-in');
+            elements.forEach(function (element) {
+                fadeIn(element);
+            });
+        }
+
+        // Aguarda o carregamento completo do DOM antes de aplicar o efeito de fade-in
+        document.addEventListener('DOMContentLoaded', function () {
+            applyFadeInEffect();
+        });
+
+    </script>
+
+</body>
+
+</html>
