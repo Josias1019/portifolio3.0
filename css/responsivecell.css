@@ -1,4 +1,10 @@
-@media only screen and (max-width: 390px), (max-width: 414px) {
+@media only screen and (max-width: 390px ), (max-width: 414px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     background-size: auto;
     display: flex;
@@ -35,9 +41,11 @@
       font-size: 1em;
       width: 100%;
       margin-top: 15%;
+      margin-right: 17%;
       z-index: 1000;
     }
 
+  
     i {
       color: #FFA500;
     }
@@ -75,7 +83,9 @@
 
   #text-apresentation {
     display: flex;
+    flex-direction: column;
     font-size: 14px ;
+    justify-content: center;
     background-color: #252525;
     border-radius: 50px; /* Aumente este valor para arredondar mais as bordas */
     max-width: 350px;
@@ -97,9 +107,9 @@
     #photo-project {
       display: flex;
       justify-content: center;
-      align-items: center;
       flex-direction: column;
-      margin-top: 10%;
+      margin-top: 20%;
+      margin-right: 35%;
       margin-bottom: 20%;
     }
   
