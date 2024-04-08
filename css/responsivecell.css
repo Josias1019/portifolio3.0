@@ -32,7 +32,6 @@
     }
   }
 
-  
     /* Quando a tela for menor que 768px, alteramos o layout para empilhar verticalmente */
     #menu {
       display: flex;
@@ -52,7 +51,6 @@
 
     /* Removemos o padding horizontal e aplicamos espaçamento vertical para cada item do menu */
 
-  
     .link-menu {
       background-color: #5d4528;
       max-height: 10px;
@@ -61,6 +59,7 @@
       width: 100%;
       padding: 30px;
       border-radius: 50%;
+      margin: 2%;
     }
 
     .li-menu.brilho {
@@ -89,10 +88,11 @@
     background-color: #252525;
     border-radius: 50px; /* Aumente este valor para arredondar mais as bordas */
     max-width: 350px;
-    height: auto;
-    max-height: 800px;
+    width: 100%;
     height: auto;
     margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.521);
 }
   
@@ -114,8 +114,8 @@
     }
   
     .imagem-slider {
-      max-height: 320px; height: auto;
-      max-width: 320px; width: auto;
+      max-height: 350px; height: auto;
+      max-width: 350px; width: auto;
       border-radius: 100%;
       box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.541);
     }
@@ -123,29 +123,104 @@
     footer {
       display: flex;
       flex-direction: column;
-      justify-content: start;
-      position: fixed;
+      position: unset;
       align-items: center;
       color: #b4b4b4;
       width: 100%;
       height: auto;
       background-color: #252525;
-      position: relative;
     }
 
     #left-footer {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
       text-align: center;
-      align-items: center;
       max-width: 414px;
       width: 100%;
       margin-bottom: 3%;
     }
+
+    .gmail-pai {
+      display: flex;
+    }
+    
+    .foto-gmail {
+      width: 25.6px;
+      height: 25.6px;
+      margin-left: -85%;
+      margin-right: 11%;
+    }
+    
+    .gmail {
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+      transition: color 0.5s ease;
+    }
+    
+    .gmail:hover {
+      cursor: default;
+      color: #FFA500;
+    }
+
+    .cell-pai {
+      display: flex;
+      flex-direction: row;
+      margin-top: 2%;
+      margin-left: -50%;
+    }
+    
+    .foto-cell {
+      width: 25.6px;
+      height: 25.6px;
+      margin-right: 5%;
+    }
+    
+    .cell {
+      display: flex;
+      flex-direction: row;
+      justify-content: baseline;
+      align-items: center;
+      font-size: 1em;
+      transition: color 0.5s ease;
+    }
+    
+    .cell:hover {
+      cursor: default;
+      color: #FFA500;
+    }
+
+    .linkedin-pai {
+      display: flex;
+      margin-top: 2%;
+      margin-left: 5%;
+      margin-bottom: 3%;
+    }
+    
+    .foto-linkedin {
+      width: 25.6px;
+      height: 25.6px;
+      margin-right: 1%;
+    }
+    
+    .linkedin {
+      display: flex;
+      align-items: center;
+      transition: color 0.5s ease;
+    }
+    
+    .a-linkedin:hover {
+      cursor: pointer;
+      color: #FFA500;
+    }
+    
+    .a-linkedin {
+      text-decoration: none;
+      color: #b4b4b4;
+    }
+
     #mid-footer {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       flex-direction: column;
       text-align: center;
       max-width: 414px;
@@ -159,6 +234,7 @@
       text-align: center;
       max-width: 414px;
       width: 100%;
+      margin-bottom: 5%;
     }
 
   }
